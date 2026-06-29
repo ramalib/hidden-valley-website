@@ -23,14 +23,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand col */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded bg-copper flex items-center justify-center flex-shrink-0 shadow-[0_2px_8px_rgba(176,115,56,0.35)]">
-                <span className="text-white font-display font-bold text-sm">HV</span>
-              </div>
-              <div>
-                <p className="text-white font-display font-700 text-sm leading-tight">Hidden Valley</p>
-                <p className="text-stone-dark/50 font-sans text-[10px] uppercase tracking-[0.12em]">Siding &amp; Rain Gutter</p>
-              </div>
+            <div className="flex flex-col mb-5">
+              <span className="text-white font-display font-800 text-xl leading-tight tracking-[-0.01em]">Hidden Valley</span>
+              <span className="text-stone-dark/50 font-sans text-[10px] font-600 uppercase tracking-[0.14em] leading-tight mt-0.5">Siding &amp; Seamless Rain Gutter</span>
             </div>
             <p className="font-sans text-stone-dark/55 text-sm leading-[1.7] mb-5">
               Family-owned exterior contractor serving West Jordan and the Salt Lake Valley since 2011.

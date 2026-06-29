@@ -29,14 +29,9 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-18 md:h-20">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3 group" aria-label="Hidden Valley Siding home">
-          <div className="w-9 h-9 rounded bg-copper flex items-center justify-center flex-shrink-0 shadow-[0_2px_8px_rgba(176,115,56,0.4)]">
-            <span className="text-white font-display font-bold text-sm leading-none">HV</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-white font-display font-bold text-base leading-tight tracking-tight">Hidden Valley</span>
-            <span className="text-stone-dark text-[10px] font-sans font-500 uppercase tracking-[0.12em] leading-tight">Siding &amp; Rain Gutter</span>
-          </div>
+        <a href="/" className="flex flex-col group" aria-label="Hidden Valley Siding home">
+          <span className="text-white font-display font-800 text-lg leading-tight tracking-[-0.01em] group-hover:text-stone transition-[color] duration-200">Hidden Valley</span>
+          <span className="text-stone-dark/60 font-sans text-[10px] font-600 uppercase tracking-[0.14em] leading-tight">Siding &amp; Seamless Rain Gutter</span>
         </a>
 
         {/* Desktop nav */}
