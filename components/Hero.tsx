@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  show: (d: number) => ({ opacity: 1, y: 0, transition: { duration: 0.75, delay: d, ease: [0.16, 1, 0.3, 1] } }),
+  show: (d: number) => ({ opacity: 1, y: 0, transition: { duration: 0.75, delay: d, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }),
 };
 
 export default function Hero() {
