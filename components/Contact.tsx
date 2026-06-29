@@ -25,7 +25,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             <span className="inline-flex items-center gap-2 text-copper font-sans text-xs font-700 uppercase tracking-[0.2em] mb-5">
               <span className="h-px w-6 bg-copper" />
@@ -79,7 +79,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="font-display text-2xl font-700 text-white mb-1">Request a Free Estimate</h3>

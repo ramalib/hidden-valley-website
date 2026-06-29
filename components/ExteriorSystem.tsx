@@ -55,7 +55,7 @@ export default function ExteriorSystem() {
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             <span className="inline-flex items-center gap-2 text-copper font-sans text-xs font-700 uppercase tracking-[0.2em] mb-5">
               <span className="h-px w-6 bg-copper" />
@@ -85,7 +85,7 @@ export default function ExteriorSystem() {
               className="absolute left-[18px] top-5 bottom-5 w-px bg-gradient-to-b from-copper via-copper/40 to-transparent"
               initial={{ scaleY: 0, originY: 0 }}
               animate={inView ? { scaleY: 1 } : {}}
-              transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             />
             <div className="flex flex-col gap-0">
               {layers.map((layer, i) => (
@@ -93,7 +93,7 @@ export default function ExteriorSystem() {
                   key={layer.name}
                   initial={{ opacity: 0, x: 20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                   className={`relative flex items-start gap-5 pl-10 py-5 ${i < layers.length - 1 ? "border-b border-white/8" : ""}`}
                 >
                   <div className={`absolute left-[13px] top-[22px] w-[11px] h-[11px] rounded-full border-2 border-slate ${layer.dotColor} flex-shrink-0`} />

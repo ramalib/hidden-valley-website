@@ -72,7 +72,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           className="mb-14"
         >
           <span className="inline-flex items-center gap-2 text-copper font-sans text-xs font-700 uppercase tracking-[0.2em] mb-4">
@@ -93,7 +93,7 @@ export default function Services() {
               key={svc.title}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.55, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.55, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="group relative bg-stone rounded-xl p-7 border border-stone-mid hover:border-copper/40 hover:shadow-[0_8px_32px_rgba(184,144,60,0.1)] transition-[border-color,box-shadow] duration-300"
             >
               <div className="w-11 h-11 rounded-lg bg-white border border-stone-mid group-hover:border-copper/30 flex items-center justify-center text-copper mb-5 transition-[border-color] duration-300 shadow-[0_1px_4px_rgba(0,0,0,0.06)]">
