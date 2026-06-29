@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand palette — Deep Forest + Warm Gold ── */
+  --color-slate:        #1A3028;
+  --color-slate-light:  #224035;
+  --color-slate-mid:    #2D5040;
+
+  --color-copper:       #B8903C;
+  --color-copper-light: #D4A84C;
+  --color-copper-dim:   rgba(184, 144, 60, 0.15);
+
+  --color-stone:        #F4EDE0;
+  --color-stone-mid:    #E6DDD0;
+  --color-stone-dark:   #C4B89E;
+
+  /* ── Text hierarchy ── */
+  --color-ink:          #151C18;
+  --color-ink-sub:      #445048;
+  --color-ink-muted:    #7A9082;
+
+  /* ── Fonts ── */
+  --font-display: var(--font-playfair);
+  --font-sans:    var(--font-manrope);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #151C18;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Nav link underline ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Gold gradient text ── */
+.copper-text {
+  background: linear-gradient(135deg, #D4A84C 0%, #B8903C 60%, #8A6520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Siding texture pattern (hero overlay) ── */
+.siding-texture {
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent 0px,
+    transparent 10px,
+    rgba(255,255,255,0.025) 10px,
+    rgba(255,255,255,0.025) 11px,
+    transparent 11px,
+    transparent 12px,
+    rgba(0,0,0,0.06) 12px,
+    rgba(0,0,0,0.06) 13px
+  );
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
